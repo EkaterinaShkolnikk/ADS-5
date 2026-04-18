@@ -39,7 +39,8 @@ std::string infx2pstfx(const std::string& inf) {
             }
             stack.pop();
         } else {
-            while (!stack.isEmpty() && (OperPriority(sym) <= OperPriority(stack.get()))) {
+            while (!stack.isEmpty() &&
+                (OperPriority(sym) <= OperPriority(stack.get()))) {
                 postfix.push_back(stack.get());
                 postfix.push_back(' ');
                 stack.pop();
@@ -61,8 +62,7 @@ std::string infx2pstfx(const std::string& inf) {
     return postfix;
 }
 
-
-   int eval(const std::string& post) {
+    int eval(const std::string& post) {
        TStack<int, 100> stack;
 
        for (char sym : post) {
