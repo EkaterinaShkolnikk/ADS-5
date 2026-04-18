@@ -92,4 +92,4 @@ std::string infx2pstfx(const std::string& inf) {
        }
 
        return stack.get();
-   }
+}
